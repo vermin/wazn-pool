@@ -39,7 +39,7 @@
             </div><!-- col-3 -->
         </div><!-- row -->
     </div>
-        
+
     <!-- Chart -->
     <div id="blocksChart" class="card padding-15 padding-t-5 padding-b-5 mg-b-20">
         <h4 id="blocksChartTitle">Blocks found</h4>
@@ -157,7 +157,7 @@ function generateChart(data) {
         type: 'bar',
         data: {
             labels: labels,
-            datasets: 
+            datasets:
             [
                 {
                     label: 'Blocks',
@@ -208,14 +208,14 @@ function parseBlock(height, serializedBlock){
     var toGo = lastStats.config.depth - (lastStats.network.height - block.height) + 1;
     if(toGo > 1){
         block.maturity = toGo + ' to go';
-    } 
+    }
     else if(toGo == 1){
         block.maturity = "<i class='fa fa-spinner fa-spin'></i>";
-    } 
+    }
     else if(toGo <= 0){
         block.maturity = "<i class='fa fa-unlock-alt'></i>";
     }
-        
+
     switch (block.orphaned){
         case '0':
             block.status = 'unlocked';
@@ -234,7 +234,7 @@ function parseBlock(height, serializedBlock){
 }
 
 // Get block row element
-function getBlockRowElement(block, jsonString){        
+function getBlockRowElement(block, jsonString){
     function formatBlockLink(hash){
         return '<a target="_blank" href="' + getBlockchainUrl(hash) + '">' + hash + '</a>';
     }
@@ -244,22 +244,22 @@ function getBlockRowElement(block, jsonString){
         'unlocked': 'unlocked',
         'orphaned': 'orphaned'
     };
-    
+
     var row = document.createElement('tr');
     row.setAttribute('data-json', jsonString);
     row.setAttribute('data-height', block.height);
     row.setAttribute('id', 'blockRow' + block.height);
     row.setAttribute('title', block.status);
     row.className = blockStatusClasses[block.status];
-                
-    var reward = "";    
+
+    var reward = "";
     if(typeof block.reward == "undefined"){
         reward = "Waiting...";
     }
     else{
         reward = getReadableCoins(block.reward, null, true);
     }
-    
+
     var columns =
         '<td class="col1">' + formatDate(block.time) + '</td>' +
         '<td class="col2">' + reward + '</td>' +
@@ -270,7 +270,7 @@ function getBlockRowElement(block, jsonString){
         '<td class="col7">' + block.maturity + '</td>';
 
     row.innerHTML = columns;
-    
+
     return row;
 }
 

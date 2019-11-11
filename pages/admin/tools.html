@@ -65,7 +65,7 @@ $('#testEmailButton').click(function() {
     if(!password) {
         password = prompt('Enter admin password');
     }
-    
+
     var email = $('#emailAddress').val().trim();
     if (!email) {
         showError('email', 'No email address specified');
@@ -104,7 +104,7 @@ $('#testTelegramButton').click(function(){
     if(!password) {
         password = prompt('Enter admin password');
     }
-    
+
     $.ajax({
         url: api + '/test_telegram_notification',
         data: {

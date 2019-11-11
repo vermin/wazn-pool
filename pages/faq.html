@@ -6,7 +6,7 @@
         </ol>
         <h6 class="slim-pagetitle">Frequently Asked Questions (FAQ)</h6>
     </div><!-- slim-pageheader -->
-                
+
     <div class="card padding-15 push-down-10 mg-t-20" tkey="faq1_text">
         <div class="card-header tx-medium bd-0 tx-white bg-primary-dark" tkey="faq1_title"><span>What is difficulty?</span></div>
         <div class="card-body">Difficulty is a measure of how difficult it is to find a hash below a given target.</div>
@@ -16,7 +16,7 @@
         <div class="card-header tx-medium bd-0 tx-white bg-primary-dark" tkey="faq1_title"><span>What is luck?</span></div>
         <div class="card-body">Mining is probabilistic in nature: if you find a block earlier than you statistically should on average you are lucky if it takes longer, you are unlucky. In a perfect World pool would find a block on 100% luck value. Less then 100% means the pool was lucky. More then 100% means the pool was unlucky.</div>
     </div>
-    
+
     <div class="card padding-15 push-down-10 mg-t-20" tkey="faq3_text">
         <div class="card-header tx-medium bd-0 tx-white bg-primary-dark" tkey="faq1_title"><span>What is share?</span></div>
         <div class="card-body">Share is a possible valid hash for the block. Shares are beings sent by your rigs to the pool to prove their work.</div>
@@ -86,7 +86,7 @@ currentPage = {
             var botURL = 'https://t.me/'+botName;
             $('#telegramBotURL').attr('href', botURL);
             updateText('telegramBotName', botName);
-	    
+
             var botStats = lastStats.config.telegramBotStats;
             if (botStats) updateText('botStats', botStats);
 
@@ -98,7 +98,7 @@ currentPage = {
 
             var botBlocks = lastBlocks.config.telegramBotBlocks;
             if (botBlocks) updateText('botBlocks', botBlocks);
-        }	
+        }
     }
 };
 </script>

@@ -434,7 +434,7 @@
         				},
         				gridLines: {
           				color: 'rgba(255, 255, 255, .08)'
-								},							
+								},
 						}]
           },
           hover: {
@@ -447,8 +447,8 @@
 						callbacks: {
        			  label: function(tooltipItem) {
              	  return "$ " + Number(tooltipItem.yLabel).toFixed(4);
-           		}			
-       			}						
+           		}
+       			}
 					}
         }
       });
@@ -538,7 +538,7 @@
 
     // Create charts
     function createCharts() {
-      if (!lastStats || !lastStats.charts) 
+      if (!lastStats || !lastStats.charts)
         return;
       var data = lastStats.charts;
 

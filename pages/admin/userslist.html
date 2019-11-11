@@ -72,7 +72,7 @@ function createUserTable(promptPassword) {
     if(!password || promptPassword) {
         password = prompt('Enter admin password');
     }
-    
+
     $.ajax({
         url: api + '/admin_users',
         data: {password: password},

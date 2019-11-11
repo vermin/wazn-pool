@@ -91,7 +91,7 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </div>
 
 <script>
@@ -101,7 +101,7 @@ currentPage = {
     init: function() {
         $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
             $("#myIP").html(data.ip.toString());
-        });    
+        });
     },
     update: function(){
 	  if (!lastStats.config.sendEmails) $('#emailNotifications').hide();
@@ -144,7 +144,7 @@ function showSuccess(id, message) {
 // Get current payout level
 function getPayoutLevel(address) {
     if (!address || address == '') return;
-    
+
     $.ajax({
         url: api + '/get_miner_payout_level',
         data: {
@@ -157,7 +157,7 @@ function getPayoutLevel(address) {
             $('#yourPayoutRate').val(data.level);
         }
     });
-} 
+}
 
 // Set payout level
 function setPayoutLevel(address, ip, level) {
@@ -215,7 +215,7 @@ function isEmail(email) {
 // Get current email address for notifications
 function getEmailAddress(address) {
     if (!address || address == '') return;
-    
+
     $.ajax({
         url: api + '/get_email_notifications',
         data: {
@@ -229,7 +229,7 @@ function getEmailAddress(address) {
         }
     });
 }
-    
+
 // Set email address for notifications
 function setEmailNotifications(email, address, ip, enable) {
     var address = $('#yourAddress').val().trim();

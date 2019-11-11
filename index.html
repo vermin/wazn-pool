@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
-    <title>Conceal Mining Pool</title>
+    <link rel="icon" href="wazn_32.png" type="image/ico" />
+    <title>WAZN Mining Pool</title>
 
     <!-- vendor css -->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -36,17 +38,17 @@
     <script src="js/ResizeSensor.js"></script>
     <script src="js/slim.js"></script>
 </head>
-<body>    
+<body>
     <div class="slim-header">
         <div class="container">
           <div class="slim-header-left">
-            <img src="img/logo.svg" width="48" height="58"> 
+            <img src="wazn_128.png" width="36" height="36">
             <div class="logoText">
                 <h2 class="slim-logo"><a href="index.html"><span>POOL</span></a></h2>
             </div>
           </div><!-- slim-header-left -->
           <div class="slim-header-right">
-             <div id="section"><span id="statsUpdated"><span tkey="statsUpdated">Stats Updated</span> &nbsp;<i class="fa fa-bolt"></i></span></div>                
+             <div id="section"><span id="statsUpdated"><span tkey="statsUpdated">Stats Updated</span> &nbsp;<i class="fa fa-bolt"></i></span></div>
              <div id="langSelector">
                  <select id="newLang" class="form-control">
                      <option value="en" selected="selected">English</option>
@@ -57,11 +59,11 @@
                      <option value="ca">Català</option>
                      <option value="ko">한국어</option>
                  </select>
-             </div>        
+             </div>
           </div><!-- header-right -->
         </div><!-- container -->
       </div><!-- slim-header -->
-  
+
       <div class="slim-navbar">
         <div class="container">
           <ul class="nav">
@@ -93,7 +95,7 @@
               <a class="nav-link hot_link" data-page="top10miners.html" href="#top10miners">
                 <i class="icon ion-ios-chatboxes-outline"></i>
                 <span tkey="top10miners">TOP 10</span>
-        
+
               </a>
             </li>
             <li class="nav-item with-sub">
@@ -107,26 +109,26 @@
                     <li><a class="hot_link" data-page="market.html" href="#market"><i class="fa fa-bank icon-dropdown"></i><span tkey="market">Market / Calculator</span></a></li>
                     <li><a class="hot_link" data-page="settings.html" href="#settings"><i class="fa fa-gears icon-dropdown"></i><span tkey="settings">Settings</span></a></li>
                     <li><a class="hot_link" data-page="faq.html" href="#faq"><i class="fa fa-comments icon-dropdown"></i><span tkey="faq">FAQ</span></a></li>
-                    <li><a class="hot_link" href="https://discord.gg/YbpHVSd"><i class="fa fa-ticket icon-dropdown"></i><span tkey="discord">Discord</span></a></li>
+                    <li><a class="hot_link" href="https://discord.gg/WAZNPool"><i class="fa fa-ticket icon-dropdown"></i><span tkey="discord">Discord</span></a></li>
                 </ul>
              </div><!-- dropdown-menu -->
            </li>
           </ul>
         </div><!-- container -->
       </div><!-- slim-navbar -->
-  
+
       <div id="page-wrapper">
             <div class="slim-mainpanel" id="page">
                 <p id="loading" class="text-center"><i class="fa fa-circle-o-notch fa-spin"></i></p>
-            </div><!-- slim-mainpanel -->          
+            </div><!-- slim-mainpanel -->
       </div>
-  
+
       <div class="slim-footer" id="poolFooter">
         <div class="container">
-          <p>Copyright 2019 &copy; All Rights Reserved. Conceal Network</p>
+          <p>Copyright 2019 &copy; All Rights Reserved. <a href="https://wazn.io">WAZN Project</a> - Theme adapted from Conceal Network</p>
         </div><!-- container -->
       </div><!-- slim-footer -->
-  
+
     <!-- Javascript -->
     <script src="config.js"></script>
     <script src="lang/languages.js"></script>
@@ -163,7 +165,7 @@
 
     // Update live informations
     function updateLiveStats(data) {
-        pulseLiveUpdate();   
+        pulseLiveUpdate();
         lastStats = data;
         if (lastStats && lastStats.pool && lastStats.pool.totalMinersPaid.toString() == '-1'){
             lastStats.pool.totalMinersPaid = 0;
@@ -176,26 +178,26 @@
     function updateIndex(){
         updateText('coinSymbol', lastStats.config.symbol);
         updateText('g_networkHashrate', getReadableHashRateString(lastStats.network.difficulty / lastStats.config.coinDifficultyTarget) + '/sec');
-        updateText('g_poolHashrate', getReadableHashRateString(lastStats.pool.hashrate) + '/sec');    
+        updateText('g_poolHashrate', getReadableHashRateString(lastStats.pool.hashrate) + '/sec');
         if (lastStats.miner && lastStats.miner.hashrate){
             updateText('g_userHashrate', getReadableHashRateString(lastStats.miner.hashrate) + '/sec');
         }
         else{
             updateText('g_userHashrate', 'N/A');
-        }    
+        }
         updateText('poolVersion', lastStats.config.version);
     }
 
     // Load live statistics
     function loadLiveStats(reload) {
         var apiURL = api + '/stats';
-        
+
         var address = getCurrentAddress();
         if (address) { apiURL = apiURL + '?address=' + encodeURIComponent(address); }
 
         if (xhrLiveStats) xhrLiveStats.abort();
-        
-        $.get(apiURL, function(data){        
+
+        $.get(apiURL, function(data){
             updateLiveStats(data);
             if (!reload) routePage(fetchLiveStats);
         });
@@ -208,7 +210,7 @@
 
         var address = getCurrentAddress();
         if (address) { apiURL = apiURL + '?address=' + encodeURIComponent(address); }
-        
+
         xhrLiveStats = $.ajax({
             url: apiURL,
             dataType: 'json',
@@ -221,8 +223,8 @@
     }
 
     // Initialize
-    $(function(){        
-        // Add support informations to menu    
+    $(function(){
+        // Add support informations to menu
         if (typeof telegram !== 'undefined' && telegram) {
             $('#menu-content').append('<li><a target="_new" href="'+telegram+'"><i class="fa fa-telegram"></i> <span tkey="telegram">Telegram group</span></a></li>');
         }
@@ -236,7 +238,7 @@
             $('#menu-content').append('<div id="mLangSelector"></div>');
         renderLangSelector();
         }
-        
+
         // Load live statistics for the first time
         loadLiveStats();
     });
