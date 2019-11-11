@@ -1,1 +1,2 @@
-# wazn-pool
+# WAZN Pool  
+work in progress...
