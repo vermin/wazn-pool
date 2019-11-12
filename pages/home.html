@@ -213,9 +213,9 @@
             <div class="icon icon-info">
               <span class="fa fa-sm fa-dollar"></span>
             </div>
-            <label class="tx-primary">CCX to USD</label>
+            <label class="tx-primary">WAZN to USD</label>
             <h2>
-              <span id="CCXToUSD">N/A</h2>
+              <span id="WAZNToUSD">N/A</h2>
             </div>
             <!-- dash-content -->
           </div>
@@ -225,9 +225,9 @@
               <div class="icon icon-info">
                 <span class="fa fa-sm fa-btc"></span>
               </div>
-              <label class="tx-primary">CCX to BTC</label>
+              <label class="tx-primary">WAZN to BTC</label>
               <h2>
-                <span id="CCXToBTC">N/A</span></h2>
+                <span id="WAZNToBTC">N/A</span></h2>
             </div>
             <!-- dash-content -->
           </div>
@@ -366,9 +366,9 @@
 
     // get conceal market data
     $.getJSON("https://api.coingecko.com/api/v3/coins/conceal?sparkline=true", function (data) {
-      USDperCCX = data.market_data.current_price.usd;
-      $("#CCXToUSD").html("$ " + data.market_data.current_price.usd.toFixed(2));
-      $("#CCXToBTC").html(data.market_data.current_price.btc.toFixed(8));
+      USDperWAZN = data.market_data.current_price.usd;
+      $("#WAZNToUSD").html("$ " + data.market_data.current_price.usd.toFixed(2));
+      $("#WAZNToBTC").html(data.market_data.current_price.btc.toFixed(8));
       $("#marketcap").html("$ " + data.market_data.market_cap.usd.toFixed(0));
       $("#marketcapRank").html("(RANK " + data.market_cap_rank + ")");
       $("#dailyVolume").html("$ " + data.market_data.total_volume.usd.toFixed(0));
@@ -730,9 +730,9 @@
 
     // Get price in specified currency
     function getCurrencyPriceText(coinsRaw) {
-      if (USDperCCX) {
+      if (USDperWAZN) {
         var amount = parseFloat((parseInt(coinsRaw || 0) / lastStats.config.coinUnits).toFixed(2));
-        var price = USDperCCX * amount;
+        var price = USDperWAZN * amount;
         return ("($ " + price.toFixed(2) + ")");
       }
     }

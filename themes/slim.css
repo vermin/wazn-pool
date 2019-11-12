@@ -243,12 +243,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #1b84e7;
+  color: #006633;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #115da4;
+    color: #339933;
     text-decoration: none; }
 
 a:not([href]):not([tabindex]) {
@@ -2167,10 +2167,10 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #1b84e7;
+  color: #006633;
   background-color: transparent; }
   .btn-link:hover {
-    color: #115da4;
+    color: #339933;
     text-decoration: none;
     background-color: transparent;
     border-color: transparent; }
@@ -3365,11 +3365,11 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #1b84e7;
+  color: #006633;
   background-color: #fff;
   border: 1px solid #dee2e6; }
   .page-link:hover {
-    color: #115da4;
+    color: #339933;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
@@ -40478,8 +40478,9 @@ body {
 }
 
 .btn-primary {
-  color: #333;
-  background-color: #339933 !important;
+  color: #339933;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #339933 !important;
 }
 
 .bg-primary-dark {

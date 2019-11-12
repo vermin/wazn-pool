@@ -367,12 +367,16 @@
 
       //algorithm = '';
       //xmrstakAlgo = '';
-      algorithm = 'Cryptonight Conceal';
-      xmrstakAlgo = 'cryptonight_conceal';
+      algorithm = '';
+      xmrstakAlgo = '';
+      xmrigAlgo = '';
 
-      /*
-      if (cnAlgorithm == "cryptonight_light") {
-        if (cnVariant === 1) {
+
+      if (cnAlgorithm == "cryptonight_pico") {
+         if (cnVariant === 2) {
+             algorithm = 'Cryptonight Wazn1';
+             xmrstakAlgo = 'cryptonight_turtle';
+        } else if (cnVariant === 1) {
           algorithm = 'Cryptonight Light (Aeon v7)';
           xmrstakAlgo = 'cryptonight_lite_v7';
         } else if (cnVariant === 2) {
@@ -417,7 +421,6 @@
           xmrstakAlgo = 'cryptonight';
         }
       }
-      */
 
       /*
       if (coin == 'aeon') xmrstakAlgo = 'aeon7';
@@ -439,8 +442,9 @@
 
       updateText('cnAlgorithm', algorithm);
       updateText('xmrstakAlgo', xmrstakAlgo);
-    }
-  };
+      updateTextClasses('xmrigAlgo', cnVariant);
+  }
+};
 
   /**
    * Configuration generator
