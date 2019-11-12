@@ -1815,7 +1815,7 @@ fieldset:disabled a.btn {
   .show > .btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #339933;
-    border-color: #1363b0; }
+    border-color: #006633; }
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(51, 153, 51, 1); }
@@ -40553,7 +40553,7 @@ html {
 }
 
 a, .tx-primary {
-  color: #339933;
+  color: #006633;
 }
 
 .slim-pagetitle {
