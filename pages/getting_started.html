@@ -300,15 +300,19 @@
               <tr class="appConfig">
                 <td colspan="5">
                   <div class="collapse" id="xmrig-cc">
-                    <pre><code>"pools": [
-                                        {
-                                            "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
-                                            "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
-                                            "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
-                                            "keepalive": true,
-                                            "nicehash": false
-                                        },
-                                    ],</code></pre>
+
+<pre><code>"pools": [
+    {
+        "url": "<span class="exampleHost">POOL_HOST</span>:<span class="examplePort">PORT</span>",
+        "user": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>",
+        "pass": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+        "keepalive": true,
+        "nicehash": false,
+        "algo": "cryptonight-ultralite",
+        "pow-variant": "2"
+    },
+],</code></pre>
+
                   </div>
                 </td>
               </tr>
@@ -365,93 +369,102 @@
       var cnAlgorithm = lastStats.config.cnAlgorithm || "cryptonight_pico";
       var cnVariant = lastStats.config.cnVariant || 0;
 
-      //algorithm = '';
-      //xmrstakAlgo = '';
-      algorithm = 'Cryptonight Wazn1';
-      xmrstakAlgo = 'turtlecoin';
-      xmrigAlgo = 'cryptonight_pico';
-      /*
-     if (cnAlgorithm == "cryptonight_pico") {
-         if (cnVariant === 2) {
-                 algorithm = 'Cryptonight Wazn1';
-                 xmrstakAlgo = 'cryptonight_turtle';
-         }
-     else if (cnAlgorithm == "cryptonight_light") {
+      algorithm = '';
+      xmrstakAlgo = '';
+
+      if (cnAlgorithm == "cryptonight_pico") {
+          if (cnVariant === 1)
+              algorithm = 'wazn1';
+          else
+              algorithm = 'Argon2id Chukwa';
+      } else if (cnAlgorithm == "randomx") {
+          if (cnVariant === 1)
+              algorithm = 'CryptoNight DefyX';
+          else if (cnVariant === 2)
+              algorithm = 'RandomARQ';
+          else if (cnVariant === 17) {
+              algorithm = 'RandomWOW';
+              xmrstakAlgo = 'randomX_wow';
+          } else if (cnVariant === 18) {
+              algorithm = 'RandomXL';
+              xmrstakAlgo = 'randomX_loki';
+          } else {
+              algorithm = 'RandomX';
+              xmrstakAlgo = 'randomX';
+          }
+  } else if (cnAlgorithm == "cryptonight_light") {
       if (cnVariant === 1) {
-        algorithm = 'Cryptonight Light (Aeon v7)';
-        xmrstakAlgo = 'cryptonight_lite_v7';
-        } else if (cnVariant === 2) {
-          algorithm = 'Cryptonight Light (IPBC)';
-          xmrstakAlgo = 'cryptonight_lite_v7_xor';
-        } else {
-          algorithm = 'Cryptonight Light (Original)';
-          xmrstakAlgo = 'cryptonight_lite';
-        }
-      }
-      else if (cnAlgorithm == "cryptonight_conceal") {
-        algorithm = 'Cryptonight Conceal';
-        xmrstakAlgo = 'cryptonight_conceal';
-      }
-      else if (cnAlgorithm == "cryptonight_heavy") {
-        if (cnVariant === 1) {
-          algorithm = 'Crytonight Heavy (Haven)';
-          xmrstakAlgo = 'haven';
-        } else {
-          algorithm = 'Cryptonight Heavy';
+         algorithm = 'CryptoNight Lite v7';
+         xmrstakAlgo = 'cryptonight_lite_v7';
+          } else {
+              algorithm = 'CryptoNight Lite';
+              xmrstakAlgo = 'cryptonight_lite';
+          }
+      } else if (cnAlgorithm == "cryptonight_conceal") {
+          algorithm = 'Cryptonight Conceal';
+          xmrstakAlgo = 'cryptonight_conceal';
+      } else if (cnAlgorithm == "cryptonight_heavy") {
+          if (cnVariant === 1) {
+             algorithm = 'CryptoNight Haven';
+             xmrstakAlgo = 'cryptonight_haven';
+         } else if (cnVariant === 2) {
+             algorithm = 'CryptoNight Saber';
+             xmrstakAlgo = 'cryptonight_bittube2';
+         } else {
+          algorithm = 'CryptoNight Heavy';
           xmrstakAlgo = 'cryptonight_heavy';
-        }
-      }
-      else {
+         }
+     } else {
         if (cnVariant === 1) {
-          algorithm = 'Cryptonight (Monero v7)';
-          xmrstakAlgo = 'cryptonight_v7';
-        } else if (cnVariant === 9) {
-          algorithm = 'Cryptonight (Stellite v7)';
-          xmrstakAlgo = 'cryptonight_v7_stellite';
+            algorithm = 'CryptoNight v7';
+            xmrstakAlgo = 'cryptonight_v7';
         } else if (cnVariant === 4) {
-          algorithm = 'Cryptonight Fast (Masari)';
-          xmrstakAlgo = 'cryptonight_masari';
-        } else if (cnVariant === 2) {
-          algorithm = 'Cryptonight (Monero v8)';
-          xmrstakAlgo = 'cryptonight_v8';
+            algorithm = 'CryptoNight Fast v2';
+            xmrstakAlgo = 'cryptonight_masari';
+        } else if (cnVariant === 6) {
+            algorithm = 'CryptoNight Alloy';
+            xmrstakAlgo = 'cryptonight_alloy';
+        } else if (cnVariant === 7) {
+            algorithm = 'CryptoNight Arto';
+            xmrstakAlgo = 'cryptonight_arto';
         } else if (cnVariant === 8) {
-          algorithm = 'Cryptonight (Monero v8)';
-          xmrstakAlgo = 'cryptonight_v8';
+            algorithm = 'CryptoNight v8';
+            xmrstakAlgo = 'cryptonight_v8';
+        } else if (cnVariant === 9) {
+            algorithm = 'CryptoNight v8 Half';
+            xmrstakAlgo = 'cryptonight_v8_half';
+        } else if (cnVariant === 11) {
+            algorithm = 'CryptoNight GPU';
+            xmrstakAlgo = 'cryptonight_gpu';
+        } else if (cnVariant === 13) {
+            algorithm = 'CryptoNight R';
+            xmrstakAlgo = 'cryptonight_r';
+        } else if (cnVariant === 14) {
+            algorithm = 'CryptoNight v8 ReverseWaltz';
+            xmrstakAlgo = 'cryptonight_v8_reversewaltz';
+        } else if (cnVariant === 15) {
+            algorithm = 'CryptoNight Zelerius';
+            xmrstakAlgo = 'cryptonight_v8_zelerius';
+        } else if (cnVariant === 16) {
+            algorithm = 'CryptoNight v8 Double';
+            xmrstakAlgo = 'cryptonight_v8_double';
         } else {
-          algorithm = 'Cryptonight (Original)';
+          algorithm = 'CryptoNight';
           xmrstakAlgo = 'cryptonight';
         }
       }
-      */
-
-      /*
-      if (coin == 'aeon') xmrstakAlgo = 'aeon7';
-      if (coin == 'bbscoin') xmrstakAlgo = 'bbscoin';
-      if (coin == 'croat') xmrstakAlgo = 'croat';
-      if (coin == 'edollar') xmrstakAlgo = 'edollar';
-      if (coin == 'electroneum') xmrstakAlgo = 'electroneum';
-      if (coin == 'graft') xmrstakAlgo = 'graft';
-      if (coin == 'haven') xmrstakAlgo = 'haven';
-      if (coin == 'intense') xmrstakAlgo = 'intense';
-      if (coin == 'ipbc') xmrstakAlgo = 'ipbc';
-      if (coin == 'karbo') xmrstakAlgo = 'karbo';
-      if (coin == 'masari') xmrstakAlgo = 'masari';
-      if (coin == 'monero') xmrstakAlgo = 'monero7';
-      if (coin == 'stellite') xmrstakAlgo = 'stellite';
-      if (coin == 'sumokoin') xmrstakAlgo = 'sumokoin';
-      if (coin == 'turtlecoin') xmrstakAlgo = 'turtlecoin';
-      */
 
       updateText('cnAlgorithm', algorithm);
       updateText('xmrstakAlgo', xmrstakAlgo);
       updateTextClasses('xmrigAlgo', cnVariant);
     }
 };
+
   /**
    * Configuration generator
    **/
 
-  $('#generateConf').click(function () {
+$('#generateConf').click(function() {
     // Mining Port
     var port = $('#gMiningPort').val();
     updateTextClasses('examplePort', port);
