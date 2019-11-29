@@ -1,5 +1,5 @@
 // API Endpoint
-var api = "http://95.179.152.61:8117";
+var api = "http://api.wazn.io";
 
 // Social Links
 var email = "pool@wazn.io";
@@ -9,8 +9,8 @@ var discord = "https://discord.gg/pTDr4hr";
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
 // Explorer Links
-var blockchainExplorer = "http://explorer.wazn.io/{symbol}/block/{id}";
-var transactionExplorer = "http://explorer.wazn.io/{symbol}/transaction/{id}";
+var blockchainExplorer = "http://explorer.wazn.io/block/{id}";
+var transactionExplorer = "http://explorer.wazn.io/tx/{id}";
 
 var themeCss = "themes/default.css";
 var defaultLang = 'en';
