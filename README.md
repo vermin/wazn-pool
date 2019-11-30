@@ -3,7 +3,7 @@ WAZN Node.js Pool Frontend
 
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue)](https://opensource.org/licenses/GPL-3.0)
 
-Theme is modified and adapted from [Conceal Network](https://github.com/ConcealNetwork) developers code available here: https://github.com/ConcealNetwork/conceal-pool
+Theme is modified and adapted from [Conceal Network](https://github.com/ConcealNetwork) developers code.
 
 #### Pools Using This Software
 * https://pool.wazn.io
