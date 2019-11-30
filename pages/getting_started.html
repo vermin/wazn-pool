@@ -366,13 +366,13 @@
       if (!lastStats.config.fixedDiffEnabled) $('#fixedDiff').hide();
 
       var coin = lastStats.config.coin.toLowerCase() || null;
-      var cnAlgorithm = lastStats.config.cnAlgorithm || "cryptonight_pico";
+      var cnAlgorithm = lastStats.config.cnAlgorithm || "cryptonight_upx";
       var cnVariant = lastStats.config.cnVariant || 0;
 
       algorithm = '';
       xmrstakAlgo = '';
 
-      if (cnAlgorithm == "cryptonight_pico") {
+      if (cnAlgorithm == "cryptonight_upx") {
           if (cnVariant === 1)
               algorithm = 'wazn1';
           else
