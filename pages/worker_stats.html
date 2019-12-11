@@ -365,8 +365,8 @@ function createCharts() {
                 bordercolor = colorelem.css('border-left-color');
                 borderwidth = parseFloat(colorelem.css('width'));
             }
-            if (bgcolor === null) bgcolor = 'rgba(3, 169, 244, .4)';
-            if (bordercolor === null) bordercolor = '#03a9f4';
+            if (bgcolor === null) bgcolor = 'rgba(51,153,51,0.3)';
+            if (bordercolor === null) bordercolor = '#339933';
             if (borderwidth === null || isNaN(borderwidth)) borderwidth = 1;
 
 
@@ -376,10 +376,10 @@ function createCharts() {
                     labels: graphData[graphType].names,
                     datasets: [{
                         data: graphData[graphType].values,
-                        backgroundColor: 'rgb(255,165,0,0.2)',
+                        backgroundColor: 'rgba(51,153,51,0.3)',
                         fill: true,
                         borderWidth: 0,
-                        borderColor: '#339933'
+                        borderColor: '#66cc66'
                     }]
                 },
                 options: {

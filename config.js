@@ -2,10 +2,9 @@
 var api = "http://api.wazn.io";
 
 // Social Links
-var email = "pool@wazn.io";
-var telegram = "https://t.me/WAZNPool";
-var discord = "https://discord.gg/pTDr4hr";
+var discord = "https://discord.gg/ZmBra64";
 
+// Market Settings
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
 // Explorer Links

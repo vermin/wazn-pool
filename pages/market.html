@@ -166,7 +166,7 @@ var getDates = function(startDate, endDate) {
 };
 
 // get conceal market data
-$.getJSON( "https://api.coingecko.com/api/v3/coins/conceal?sparkline=true", function( data ) {
+$.getJSON( "https://api.coingecko.com/api/v3/coins/plenteum?sparkline=true", function( data ) {
     USDperWAZN = data.market_data.current_price.usd;
     $("#WAZNToUSD").html("$ " + data.market_data.current_price.usd.toFixed(2));
     $("#WAZNToBTC").html(data.market_data.current_price.btc.toFixed(8));
@@ -192,11 +192,11 @@ $.getJSON( "https://api.coingecko.com/api/v3/coins/conceal?sparkline=true", func
             labels: timeLabels,
             datasets: [{
                 data: data.market_data.sparkline_7d.price,
-                backgroundColor: 'rgba(51,153,51,0.3)',
+                backgroundColor: 'rgba(0,153,102,0.4)',
                 fill: true,
                 borderWidth: 0,
                 pointRadius: 1,
-                borderColor: '#339933'
+                borderColor: '#66cc66'
             }]
         },
         options: {
