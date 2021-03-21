@@ -1,11 +1,11 @@
 /* Insert your pool's unique CSS here */
 /* Insert your pool's unique CSS here */
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 body {
-  background-color: #f5f5f5;
+  background-color: #343a40;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 1.428571429;
   color: #262626;
@@ -314,7 +314,7 @@ footer > div{
     top: 0;
     left: 225px;
     right: 0;
-    padding: 0 15px;
+    padding: 0 15px 15px 15px;
   }
 }
 @media (max-width: 767px) {
@@ -799,7 +799,7 @@ table th.sort:hover{
   .s_lst table .col5,
   .s_lst table .col6 {
     /*width:120px;*/
-  }  
+  }
   .s_lst table .col7 {
     width: 210px;
   }
@@ -1028,4 +1028,3 @@ table th.sort:hover{
   opacity: .7;
   filter: alpha(opacity=70);
 }
-

@@ -13,9 +13,8 @@
                 <span class="fa fa-dashboard"></span>
             </div>
             <div class="content">
-                <div class="text"><span data-tkey="poolHashrate">PROP/SOLO Pool Hash Rate</span></div>
-                <div class="value"><span id="poolHashrate" class="smallText">N/A</span> <span class="smallText">(<span id="hashPower">0%</span>)</span></div>
-                <div class="value"><span id="poolHashrateSolo" class="smallText">N/A</span> <span class="smallText">(<span id="hashPowerSolo">0%</span>)</span></div>
+                <div class="text"><span data-tkey="poolHashrate">Pool Hash Rate</span></div>
+                <div class="value"><span id="poolHashrate" class="value">N/A</span> <span class="value">(<span id="hashPower">0%</span>)</span></div>
             </div>
         </div>
     </div>
@@ -27,10 +26,10 @@
                 <span class="fa fa-cubes"></span>
             </div>
             <div class="content">
-                <div class="text"><span data-tkey="blocksTotal">Blocks Found</span> (PROP/SOLO)</div>
+                <div class="text"><span data-tkey="blocksTotal">Blocks Found</span></div>
                 <div class="value">
                     {{#blocks}}
-                    <span class="smallText" id="blocksTotal{{coin}}">{{blocks}}/{{blocksSolo}}</span><sup>{{symbol}}</sup>&nbsp;
+                    <span class="value" id="blocksTotal">{{blocks}}</span>
                     {{/blocks}}
                 </div>
             </div>
@@ -46,10 +45,10 @@
             <div class="content">
                 <div class="text"><span data-tkey="blockSolvedTime">Blocks Found Every</span></div>
                 <div class="value">
-                    <span class="smallText" id="blockSolvedTime">N/A</span> <span class="smallText">(<span class="smallText">estimated</span>)</span>
+                    <span class="value" id="blockSolvedTime">N/A</span> <span class="smallText">(<span class="smallText">estimated</span>)</span>
                 </div>
                 <div class="value">
-                    <span class="smallText">LAST BLOCK: <span id="poolLastBlockFound">Never</span>
+                    <span class="value">LAST BLOCK: <span id="poolLastBlockFound">Never</span>
                 </div>
             </div>
         </div>
@@ -65,7 +64,7 @@
                 <div class="text"><span data-tkey="currentEffort">Current Effort</span></div>
                 <div class="value">
                     {{#efforts}}
-                    <span class="smallText" id="currentEffort{{coin}}">{{effort}}</span><sup>{{symbol}}</sup>&nbsp;
+                    <span class="value" id="currentEffort">{{effort}}</span>
                     {{/efforts}}
                 </div>
             </div>
@@ -119,7 +118,7 @@
                 </div>
                 <div class="content">
                     <div class="text"><span data-tkey="networkLastReward">Last Reward</span> ({{symbol}})</div>
-                    <div class="value"><span id="networkLastReward{{coin}}">N/A</span></div>
+                    <div class="value"><span id="networkLastReward">N/A</span></div>
                 </div>
             </div>
         </div>
@@ -134,10 +133,10 @@
                 <span class="fa fa-group"></span>
             </div>
             <div class="content">
-                <div class="text"><span data-tkey="propSoloConnectedMiners">Connected Miners</span> (PROP/SOLO)</div>
+                <div class="text"><span data-tkey="propSoloConnectedMiners">Connected Miners</span></div>
                 <div class="value">
                     {{#blocks}}
-                      <span class="smallText" id="poolMiners{{coin}}">{{miners}}/{{minersSolo}}</span><sup>{{symbol}}</sup>&nbsp;
+                      <span class="value" id="poolMiners">{{miners}}</span></div
                     {{/blocks}}
                 </div>
             </div>
@@ -151,21 +150,8 @@
                 <span class="fa fa-percent"></span>
             </div>
             <div class="content">
-                <div class="text"><span data-tkey="poolFee">Pool Fee</span> (PROP/SOLO)</div>
-                <div class="value"><span id="poolFee" class="smallText">N/A</span><sup>{{symbol}}</sup></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Finder Reward -->
-    <div class="col-lg-3 col-sm-4">
-        <div class="infoBox hoverExpandEffect">
-            <div class="icon">
-                <span class="fa fa-percent"></span>
-            </div>
-            <div class="content">
-                <div class="text"><span data-tkey="finderReward">Finder Reward</span></div>
-                <div class="value"><span id="finderReward">N/A</span><sup>{{symbol}}</sup></div>
+                <div class="text"><span data-tkey="poolFee">Pool Fee</span></div>
+                <div class="value"><span id="poolFee">N/A</span></div>
             </div>
         </div>
     </div>

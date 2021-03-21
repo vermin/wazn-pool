@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
 
-    <title>Mining Pool</title>
+    <title>WAZN Pool</title>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.3/jquery.timeago.min.js"></script>
@@ -72,8 +72,7 @@
     <!-- Top Bar -->
     <div id="top-bar">
         <div><span data-tkey="network">Network</span>: <strong><span id="g_networkHashrate"><span data-tkey="na">N/A</span></span></strong></div>
-        <div><span data-tkey="poolProp">Prop Pool</span>: <strong><span id="g_poolHashrate"><span data-tkey="na">N/A</span></span></strong></div>
-        <div><span data-tkey="poolSolo">Solo Pool</span>: <strong><span id="g_poolHashrateSolo"><span data-tkey="na">N/A</span></span></strong></div>
+        <div><span data-tkey="poolProp">Pool</span>: <strong><span id="g_poolHashrate"><span data-tkey="na">N/A</span></span></strong></div>
         <div><span data-tkey="you">You</span>: <strong><span id="g_userHashrate"><span tkey="na">N/A</span></span></strong></div>
         <div><span id="statsUpdated"><span data-tkey="statsUpdated">Stats Updated</span> &nbsp;</span></div>
         <div id="langSelector"></div>
@@ -90,9 +89,7 @@
 <!-- Footer -->
 <footer>
     <div class="text-muted">
-        <span data-tkey="poweredBy">Powered by</span> <a target="_blank" href="https://github.com/dvandal/cryptonote-nodejs-pool"><i class="fa fa-github"></i> cryptonote-nodejs-pool</a>
-        <span id="poolVersion"></span>
-        <span class="hidden-xs"><span data-tkey="openSource">open sourced under the</span> <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a></span>
+        <p>Copyright &copy; 2019 <a href="https://wazn.io" target="_blank">WAZN Project</a> | Powered by <a href="https://github.com/project-wazn/wazn-nodejs-pool/tree/maya" target="_blank"><i class="fa fa-github"></i> wazn-nodejs-pool</a></p>
     </div>
 </footer>
 
@@ -132,7 +129,7 @@ function getCurrentAddress(coin) {
     if (coin) {
         let urlWalletAddress = getUrlParam(coin, 0);
         address = urlWalletAddress || docCookies.getItem(`mining_address_${coin}`);
-    }   
+    }
     return address;
 }
 
@@ -180,7 +177,7 @@ function updateIndex(){
 // Load live statistics
 function loadLiveStats(reload) {
 
-    
+
     let apiURL = api + '/stats';
     let address = getCurrentAddress();
     if (address) { apiURL = apiURL + '?address=' + encodeURIComponent(address); }
@@ -217,8 +214,8 @@ let xhrLiveStats = {};
 function fetchLiveStats(endPoint, key) {
     let apiURL = endPoint + '/live_stats';
     let address = getCurrentAddress(key);
-    if (address) { 
-    apiURL = apiURL + '?address=' + encodeURIComponent(address); 
+    if (address) {
+    apiURL = apiURL + '?address=' + encodeURIComponent(address);
     }
 
     // if (xhrLiveStats[key] && xhrLiveStats[key].status !== 200){
@@ -290,7 +287,7 @@ $(function(){
     }
 
 
-    if (xhrBlockExplorers) 
+    if (xhrBlockExplorers)
         xhrBlockExplorers.abort();
     if (xhrMergedApis)
     xhrMergedApis.abort();

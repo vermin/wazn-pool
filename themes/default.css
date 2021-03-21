@@ -1,9 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
-body {  
-  background-color: #f5f5f5;
+body {
+  background-color: #343a40;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 1.428571429;
   color: #262626;
@@ -281,7 +281,7 @@ footer > div{
 }
 
 /* Top Bar */
-#top-bar { 
+#top-bar {
   background-color: #0274a8;
   line-height: 50px;
   display: block;
@@ -368,7 +368,7 @@ footer > div{
 }
 
 /* Bootstrap Tables */
-.table > thead > tr > td.success, 
+.table > thead > tr > td.success,
 .table > tbody > tr > td.success,
 .table > tfoot > tr > td.success,
 .table > thead > tr > th.success,
@@ -449,7 +449,7 @@ table th.sort:hover{
 .infoBox {
   background-color: #03a9f4;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  height: 80px;  
+  height: 80px;
   cursor: default;
   position: relative;
   overflow: hidden;
@@ -579,7 +579,7 @@ table th.sort:hover{
 
 /* Pool Statistics */
 .stats > div:not(#addressError) {
-  color: #262626; 
+  color: #262626;
   padding: 10px 0px;
 }
 .stats > div:not(#addressError).marketFooter {
@@ -640,8 +640,8 @@ table th.sort:hover{
 #miningProfitCalc .input-group-addon{
   padding: 6px;
 }
-#miningProfitCalc .input-group-addon, 
-#miningProfitCalc .input-group-btn .btn, 
+#miningProfitCalc .input-group-addon,
+#miningProfitCalc .input-group-btn .btn,
 #miningProfitCalc .input-group .form-control{
   height:45px;
 }
@@ -682,7 +682,7 @@ table th.sort:hover{
   #calcHashResultsHolder{
     min-width: 225px;
     max-width: 225px;
-  }    
+  }
 }
 
 /* Mining Ports */
@@ -693,7 +693,7 @@ table th.sort:hover{
 #miningPorts table .col1,
 #miningPorts table .col2 {
   text-align: center;
-}  
+}
 @media (min-width: 768px) {
   #miningPorts table th {
     white-space: nowrap;
@@ -704,7 +704,7 @@ table th.sort:hover{
   #miningPorts table .col2 {
     width:160px;
     text-align: center;
-  }  
+  }
 }
 
 /* Mining Apps */
@@ -715,7 +715,7 @@ table th.sort:hover{
   padding-top: 10px;
 }
 #miningApps_rows > tr > td {
-  border-top: none;  
+  border-top: none;
 }
 #miningApps_rows .appInfo td {
   padding: 10px;
@@ -797,7 +797,7 @@ table th.sort:hover{
   .s_lst table .col5,
   .s_lst table .col6 {
     width:120px;
-  }  
+  }
   .s_lst table .col7 {
     width: 210px;
   }
@@ -820,21 +820,21 @@ table th.sort:hover{
 @media (min-width: 768px) {
   #workerPayments table  {
     table-layout:fixed;
-  }  
+  }
   #workerPayments table th {
     white-space: nowrap;
   }
   #workerPayments table .col1 {
     width:220px;
-  }  
+  }
   #workerPayments table .col2 {
     overflow: hidden;
     width: 100%;
     text-overflow: ellipsis;
-  }  
+  }
   #workerPayments table .col3 {
     width:130px;
-  }  
+  }
   #workerPayments table .col4 {
     width: 70px;
   }
@@ -867,33 +867,33 @@ table th.sort:hover{
 #blocksReport table .col6,
 #blocksReport table .col7 {
   text-align: center;
-}  
+}
 @media (min-width: 768px) {
   #blocksReport table  {
     table-layout:fixed;
-  }  
+  }
   #blocksReport table th {
     white-space: nowrap;
   }
   #blocksReport table .col1 {
     width:220px;
-  }  
+  }
   #blocksReport table .col2 {
     width:110px;
-  }  
+  }
   #blocksReport table .col3 {
     width:90px;
-  }  
+  }
   #blocksReport table .col4 {
     width:120px;
-  }  
+  }
   #blocksReport table .col5 {
     overflow: hidden;
     text-overflow: ellipsis;
-  }  
+  }
   #blocksReport table .col6 {
     width: 75px;
-  } 
+  }
 }
 #blocksReport .pending td{
   background-color:rgba(255, 255, 255, .3);
@@ -937,23 +937,23 @@ table th.sort:hover{
 @media (min-width: 768px) {
   #paymentsReport table  {
     table-layout:fixed;
-  }  
+  }
   #paymentsReport table th {
     white-space: nowrap;
   }
   #paymentsReport table .col1 {
     width:220px;
-  }  
+  }
   #paymentsReport table .col2 {
     overflow: hidden;
     text-overflow: ellipsis;
-  }  
+  }
   #paymentsReport table .col3 {
     width:130px;
-  }  
+  }
   #paymentsReport table .col4 {
     width:110px;
-  }  
+  }
   #paymentsReport table .col5 {
     width: 220px;
     overflow: hidden;
@@ -984,7 +984,7 @@ table th.sort:hover{
   }
   #top10miners table .col3 {
     width:150px;
-  }  
+  }
   #top10miners table .col4 {
     width: 210px;
   }
