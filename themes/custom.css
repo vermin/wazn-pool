@@ -8,7 +8,7 @@ body {
   background-color: #343a40;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   line-height: 1.428571429;
-  color: #262626;
+  color: #FFFFFF;
   margin: 0;
   padding: 0;
   margin-bottom: 85px;
@@ -314,7 +314,7 @@ footer > div{
     top: 0;
     left: 225px;
     right: 0;
-    padding: 0 15px 15px 15px;
+    padding: 0 15px;
   }
 }
 @media (max-width: 767px) {
@@ -581,7 +581,7 @@ table th.sort:hover{
 
 /* Pool Statistics */
 .stats > div:not(#addressError) {
-  color: #262626;
+  color: #339933;
   padding: 10px 0px;
 }
 .stats > div:not(#addressError).marketFooter {

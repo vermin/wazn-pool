@@ -14,7 +14,7 @@
             </div>
             <div class="content">
                 <div class="text"><span data-tkey="poolHashrate">Pool Hash Rate</span></div>
-                <div class="value"><span id="poolHashrate" class="value">N/A</span> <span class="value">(<span id="hashPower">0%</span>)</span></div>
+                <div class="value"><span id="poolHashrate" class="value">N/A</span></div>
             </div>
         </div>
     </div>
@@ -47,9 +47,6 @@
                 <div class="value">
                     <span class="value" id="blockSolvedTime">N/A</span> <span class="smallText">(<span class="smallText">estimated</span>)</span>
                 </div>
-                <div class="value">
-                    <span class="value">LAST BLOCK: <span id="poolLastBlockFound">Never</span>
-                </div>
             </div>
         </div>
     </div>
@@ -63,9 +60,9 @@
             <div class="content">
                 <div class="text"><span data-tkey="currentEffort">Current Effort</span></div>
                 <div class="value">
-                    {{#efforts}}
+                  {{#effort}}
                     <span class="value" id="currentEffort">{{effort}}</span>
-                    {{/efforts}}
+                  {{/effort}}
                 </div>
             </div>
         </div>
@@ -80,7 +77,7 @@
                     <span class="fa fa-dashboard"></span>
                 </div>
                 <div class="content">
-                    <div class="text"><span data-tkey="networkHashrate">Network Hash Rate</span> ({{symbol}})</div>
+                    <div class="text"><span data-tkey="networkHashrate">Network Hash Rate</span></div>
                     <div class="value"><span id="networkHashrate{{coin}}">N/A</span></div>
                 </div>
             </div>
@@ -91,7 +88,7 @@
                     <span class="fa fa-unlock-alt"></span>
                 </div>
                 <div class="content">
-                    <div class="text"><span data-tkey="networkDifficulty">Difficulty</span> ({{symbol}})</div>
+                    <div class="text"><span data-tkey="networkDifficulty">Difficulty</span></div>
                     <div class="value"><span id="networkDifficulty{{coin}}">N/A</span></div>
                 </div>
             </div>
@@ -104,7 +101,7 @@
                     <span class="fa fa-bars"></span>
                 </div>
                 <div class="content">
-                    <div class="text"><span data-tkey="blockchainHeight">Blockchain Height</span> ({{symbol}})</div>
+                    <div class="text"><span data-tkey="blockchainHeight">Blockchain Height</span></div>
                     <div class="value"><span id="blockchainHeight{{coin}}">N/A</span></div>
                 </div>
             </div>
@@ -118,7 +115,7 @@
                 </div>
                 <div class="content">
                     <div class="text"><span data-tkey="networkLastReward">Last Reward</span> ({{symbol}})</div>
-                    <div class="value"><span id="networkLastReward">N/A</span></div>
+                    <div class="value"><span id="networkLastReward{{coin}}">N/A</span></div>
                 </div>
             </div>
         </div>
