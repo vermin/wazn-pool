@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(//fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 body {  
   background-color: #f5f5f5;
@@ -449,7 +449,7 @@ table th.sort:hover{
 .infoBox {
   background-color: #03a9f4;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
-  height: 80px;  
+  height: 90px;  
   cursor: default;
   position: relative;
   overflow: hidden;
@@ -483,8 +483,8 @@ table th.sort:hover{
   text-transform: uppercase;
 }
 .infoBox .content .value {
-  font-size: 26px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 700;
   margin-top: -4px;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
@@ -514,12 +514,12 @@ table th.sort:hover{
   padding: 15px;
   border-radius: 3px;
   color: #fff;
-  margin-bottom: 30px;
+/*  margin-bottom: 30px;
 }
 @media (max-width: 767px){
   .hashInfo {
     margin-bottom: 15px;
-  }
+  } */
 }
 .hashInfo .text {
   font-size: 13px;
@@ -770,38 +770,38 @@ table th.sort:hover{
 #addressError {
   color: red;
 }
-.s_lst td {
+#workersReport td {
   vertical-align: middle;
 }
-.status-ok{
+#workersReport .status-ok{
   color: #17a600;
 }
-.status-error{
+#workersReport .status-error{
   color: #a60000;
 }
-.s_lst table .col1,
-.s_lst table .col3,
-.s_lst table .col4,
-.s_lst table .col5 {
+#workersReport table .col1,
+#workersReport table .col3,
+#workersReport table .col4,
+#workersReport table .col5 {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .s_lst table th {
+  #workersReport table th {
     white-space: nowrap;
   }
-  .s_lst table .col1 {
+  #workersReport table .col1 {
     width:80px;
   }
-  .s_lst table .col3,
-  .s_lst table .col4,
-  .s_lst table .col5,
-  .s_lst table .col6 {
+  #workersReport table .col3,
+  #workersReport table .col4,
+  #workersReport table .col5,
+  #workersReport table .col6 {
     width:120px;
   }  
-  .s_lst table .col7 {
+  #workersReport table .col7 {
     width: 210px;
   }
-  .s_lst table .col8 {
+  #workersReport table .col8 {
     width: 210px;
   }
 }
@@ -825,11 +825,10 @@ table th.sort:hover{
     white-space: nowrap;
   }
   #workerPayments table .col1 {
-    width:220px;
+    width:190px;
   }  
   #workerPayments table .col2 {
     overflow: hidden;
-    width: 100%;
     text-overflow: ellipsis;
   }  
   #workerPayments table .col3 {
@@ -876,10 +875,10 @@ table th.sort:hover{
     white-space: nowrap;
   }
   #blocksReport table .col1 {
-    width:220px;
+    width:190px;
   }  
   #blocksReport table .col2 {
-    width:110px;
+    width:80px;
   }  
   #blocksReport table .col3 {
     width:90px;
@@ -892,8 +891,11 @@ table th.sort:hover{
     text-overflow: ellipsis;
   }  
   #blocksReport table .col6 {
-    width: 75px;
-  } 
+    width: 55px;
+  }  
+  #blocksReport table .col7 {
+    width: 80px;
+  }  
 }
 #blocksReport .pending td{
   background-color:rgba(255, 255, 255, .3);
@@ -942,7 +944,7 @@ table th.sort:hover{
     white-space: nowrap;
   }
   #paymentsReport table .col1 {
-    width:220px;
+    width:190px;
   }  
   #paymentsReport table .col2 {
     overflow: hidden;
@@ -955,13 +957,10 @@ table th.sort:hover{
     width:110px;
   }  
   #paymentsReport table .col5 {
-    width: 220px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    width: 70px;
   }
   #paymentsReport table .col6 {
     width: 70px;
-    text-overflow: ellipsis;
   }
 }
 
@@ -1014,20 +1013,4 @@ table th.sort:hover{
   #mLangSelector {
     display: block;
   }
-}
-
-.m_clear{
-  padding: 10px 0;
-  clear: both;
-}
-
-.close {
-  float: right;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1;
-  color: #ff0500;
-  text-shadow: 0 1px 0 #fff;
-  opacity: .7;
-  filter: alpha(opacity=70);
 }

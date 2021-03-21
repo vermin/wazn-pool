@@ -4,7 +4,6 @@
     "gettingStarted": "도움말:시작",
     "yourStats": "마이너(워커) 상황",
     "poolBlocks": "풀블럭상태",
-	"resources": "Resources",
     "settings": "설정",
     "telegram": "텔레그램연결",
     "discord": "Discord",
@@ -23,6 +22,7 @@
     "networkLastReward": "최근 보상량",
     "poolMiners": "연결된 마이너수",
     "poolFee": "풀 수수료",
+    "finderReward": "파인더 보상",
     
     "minerStats": "마이너 상태와 지급상황",
     "workerStats": "워커 상태",

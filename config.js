@@ -1,7 +1,9 @@
 // API Endpoint
-var api = "https://dig.wazn.io";
+var parentCoin = "Wazn";
+var api = "https://dig.wazn.io:14911";
 
 // Social Links
+var email = "pool@wazn.io";
 var telegram = "https://t.me/wazn";
 var discord = "https://discord.gg/ZmBra64";
 var facebook = "https://www.facebook.com/wazn.io";
@@ -10,8 +12,8 @@ var facebook = "https://www.facebook.com/wazn.io";
 var marketCurrencies = ["{symbol}-BTC", "{symbol}-USD", "{symbol}-EUR", "{symbol}-CAD"];
 
 // Explorer Links
-var blockchainExplorer = "https://explorer.wazn.io/block/{id}";
-var transactionExplorer = "https://explorer.wazn.io/tx/{id}";
+var blockchainExplorer = "http://explorer.wazn.io/block/{id}";
+var transactionExplorer = "http://explorer.wazn.io/tx/{id}";
 
 var themeCss = "themes/default.css";
-var defaultLang = 'en';
+var defaultLang = "en";

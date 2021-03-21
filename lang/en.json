@@ -2,9 +2,8 @@
     "miningPool": "Mining Pool",
     "dashboard": "Dashboard",
     "gettingStarted": "Getting Started",
-    "yourStats": "Worker Stats",
+    "yourStats": "Worker Statistics",
     "poolBlocks": "Pool Blocks",
-	"resources": "Resources",
     "settings": "Settings",
     "faq": "FAQ",
     "telegram": "Telegram group",
@@ -24,6 +23,7 @@
     "networkLastReward": "Last Reward",
     "poolMiners": "Connected Miners",
     "poolFee": "Pool Fee",
+    "finderReward": "Finder Reward",
     
     "minerStats": "Your Stats & Payment History",
     "workerStats": "Workers Statistics",
@@ -38,7 +38,7 @@
     "currentHashRate": "Current Hash Rate",
     "lastShare": "Last Share Submitted",
     "totalHashes": "Total Hashes Submitted",
-    "top10miners": "Top 10",
+    "top10miners": "Top 10 miners",
 
     "blocksTotal": "Blocks Found",
     "blockSolvedTime": "Blocks Found Every",

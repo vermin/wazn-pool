@@ -4,7 +4,6 @@
     "gettingStarted": "Comment démarrer",
     "yourStats": "Vos statistiques",
     "poolBlocks": "Blocs trouvés",
-	"resources": "Resources",
     "settings": "Paramètres",
     "faq": "FAQ",
     "telegram": "Telegram",
@@ -24,6 +23,7 @@
     "networkLastReward": "Dernière récompense",
     "poolMiners": "Mineurs connectés",
     "poolFee": "Frais du pool",
+    "finderReward": "Récompense Finder",
     
     "minerStats": "Vos statistiques et Historique des paiements",
     "workerStats": "Statistiques des travailleurs",
