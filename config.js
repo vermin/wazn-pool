@@ -1,5 +1,5 @@
 // API Endpoint
-var api = "https://dig.wazn.io";
+var api = "https://dig.wazn.io:14911";
 
 // Social Links
 var telegram = "https://t.me/wazn";
